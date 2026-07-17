@@ -3,261 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>石垣島 4天3夜｜潮汐行程指南</title>
+<title>恆春半島 3天2夜｜輕旅行指南</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#12242b;
-    --deep-sea:#0c3b4a;
-    --lagoon:#1a94a3;
-    --shallow:#8fd8d0;
-    --sand:#f4ecdd;
-    --coral:#e8724c;
-    --sun:#f2b441;
-    --line:rgba(12,59,74,0.15);
+    --ink:#20261f;
+    --dusk:#2b3a3a;
+    --grass:#4f7a5c;
+    --sea:#1f7a8c;
+    --sand:#f3ecd9;
+    --coral:#e0703e;
+    --sun:#eab147;
+    --line:rgba(43,58,58,0.14);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--sand);
-    color:var(--ink);
-    font-family:'Karla', sans-serif;
-    line-height:1.6;
-  }
-  h1,h2,h3,.display{
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    letter-spacing:-0.01em;
-  }
-  a{color:inherit;}
+  body{ margin:0; background:var(--sand); color:var(--ink); font-family:'Karla', sans-serif; line-height:1.6; }
+  h1,h2,h3,.display{ font-family:'Fraunces', serif; font-weight:600; letter-spacing:-0.01em; }
+  a{ color:inherit; }
 
-  /* ---------- HERO ---------- */
   .hero{
     position:relative;
-    background:linear-gradient(180deg, var(--deep-sea) 0%, var(--lagoon) 100%);
+    background:linear-gradient(180deg, var(--dusk) 0%, var(--sea) 100%);
     color:var(--sand);
     padding:88px 24px 140px;
     overflow:hidden;
     text-align:center;
   }
-  .hero .eyebrow{
-    font-size:13px;
-    letter-spacing:0.25em;
-    text-transform:uppercase;
-    opacity:0.75;
-    margin-bottom:18px;
-  }
-  .hero h1{
-    font-size:clamp(38px, 7vw, 68px);
-    margin:0 0 14px;
-    line-height:1.05;
-  }
-  .hero p.sub{
-    max-width:520px;
-    margin:0 auto;
-    font-size:17px;
-    opacity:0.85;
-  }
-  .tide{
-    position:absolute;
-    left:0; right:0; bottom:-1px;
-    width:100%;
-    height:90px;
-    display:block;
-  }
+  .hero .eyebrow{ font-size:13px; letter-spacing:0.25em; text-transform:uppercase; opacity:0.75; margin-bottom:18px; }
+  .hero h1{ font-size:clamp(38px, 7vw, 66px); margin:0 0 14px; line-height:1.05; }
+  .hero p.sub{ max-width:520px; margin:0 auto; font-size:17px; opacity:0.85; }
+  .tide{ position:absolute; left:0; right:0; bottom:-1px; width:100%; height:90px; display:block; }
 
-  /* ---------- NAV ---------- */
   .dayNav{
-    display:flex;
-    justify-content:center;
-    gap:6px;
-    flex-wrap:wrap;
-    margin:-56px auto 60px;
-    position:relative;
-    z-index:3;
-    max-width:820px;
-    padding:0 20px;
+    display:flex; justify-content:center; gap:6px; flex-wrap:wrap;
+    margin:-56px auto 60px; position:relative; z-index:3; max-width:820px; padding:0 20px;
   }
   .dayNav a{
-    background:#fff;
-    border:1px solid var(--line);
-    padding:10px 20px;
-    border-radius:999px;
-    font-size:14px;
-    font-weight:600;
-    text-decoration:none;
-    color:var(--deep-sea);
-    box-shadow:0 6px 18px rgba(12,59,74,0.12);
-    transition:transform .15s ease, background .15s ease;
+    background:#fff; border:1px solid var(--line); padding:10px 20px; border-radius:999px;
+    font-size:14px; font-weight:600; text-decoration:none; color:var(--dusk);
+    box-shadow:0 6px 18px rgba(32,38,31,0.12); transition:transform .15s ease, background .15s ease;
   }
   .dayNav a:hover{ transform:translateY(-2px); background:var(--sun); }
 
-  /* ---------- SECTION SHELL ---------- */
-  section.block{
-    max-width:920px;
-    margin:0 auto;
-    padding:0 24px 84px;
-  }
+  section.block{ max-width:920px; margin:0 auto; padding:0 24px 84px; }
   .kicker{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    font-size:13px;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--coral);
-    font-weight:700;
-    margin-bottom:10px;
+    display:inline-flex; align-items:center; gap:10px; font-size:13px; letter-spacing:0.18em;
+    text-transform:uppercase; color:var(--coral); font-weight:700; margin-bottom:10px;
   }
-  .kicker::before{
-    content:"";
-    width:22px; height:2px;
-    background:var(--coral);
-    display:inline-block;
-  }
-  section.block h2{
-    font-size:clamp(26px, 4vw, 34px);
-    margin:0 0 6px;
-    color:var(--deep-sea);
-  }
-  section.block > p.lede{
-    color:#3f5560;
-    max-width:640px;
-    margin-bottom:36px;
-  }
+  .kicker::before{ content:""; width:22px; height:2px; background:var(--coral); display:inline-block; }
+  section.block h2{ font-size:clamp(26px, 4vw, 34px); margin:0 0 6px; color:var(--dusk); }
+  section.block > p.lede{ color:#465650; max-width:640px; margin-bottom:36px; }
 
-  /* ---------- PREP GRID ---------- */
-  .prepGrid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-    gap:18px;
-  }
-  .prepCard{
-    background:#fff;
-    border-radius:16px;
-    padding:22px 20px;
-    border:1px solid var(--line);
-  }
-  .prepCard h3{
-    font-size:16px;
-    margin:0 0 8px;
-    color:var(--deep-sea);
-  }
-  .prepCard p{ margin:0; font-size:14.5px; color:#42565f; }
+  .prepGrid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:18px; }
+  .prepCard{ background:#fff; border-radius:16px; padding:22px 20px; border:1px solid var(--line); }
+  .prepCard h3{ font-size:16px; margin:0 0 8px; color:var(--dusk); }
+  .prepCard p{ margin:0; font-size:14.5px; color:#4c5c56; }
 
-  /* ---------- DAY BLOCKS ---------- */
-  .dayHeader{
-    display:flex;
-    align-items:baseline;
-    gap:16px;
-    margin-bottom:6px;
-  }
-  .dayNum{
-    font-family:'Fraunces', serif;
-    font-size:52px;
-    font-weight:700;
-    color:var(--shallow);
-    line-height:1;
-  }
-  .dayTitle{ font-size:26px; color:var(--deep-sea); }
-  .dayTagline{ color:#5a6f78; margin:0 0 30px; font-size:15px;}
+  .dayHeader{ display:flex; align-items:baseline; gap:16px; margin-bottom:6px; }
+  .dayNum{ font-family:'Fraunces', serif; font-size:52px; font-weight:700; color:#bcd2bf; line-height:1; }
+  .dayTitle{ font-size:26px; color:var(--dusk); }
+  .dayTagline{ color:#5f6f68; margin:0 0 30px; font-size:15px; }
 
-  .stop{
-    display:grid;
-    grid-template-columns:100px 1fr;
-    gap:18px;
-    padding:20px 0;
-    border-top:1px solid var(--line);
-  }
+  .stop{ display:grid; grid-template-columns:100px 1fr; gap:18px; padding:20px 0; border-top:1px solid var(--line); }
   .stop:last-child{ border-bottom:1px solid var(--line); }
-  .stop .time{
-    font-weight:700;
-    color:var(--coral);
-    font-size:14px;
-    padding-top:2px;
-  }
-  .stop .content h4{
-    margin:0 0 6px;
-    font-size:17px;
-    color:var(--ink);
-  }
-  .stop .content p{
-    margin:0 0 10px;
-    color:#42565f;
-    font-size:14.5px;
-  }
+  .stop .time{ font-weight:700; color:var(--coral); font-size:14px; padding-top:2px; }
+  .stop .content h4{ margin:0 0 6px; font-size:17px; color:var(--ink); }
+  .stop .content p{ margin:0 0 10px; color:#4c5c56; font-size:14.5px; }
+
   .mapLink{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    font-size:13px;
-    font-weight:700;
-    color:var(--lagoon);
-    text-decoration:none;
-    border-bottom:1.5px solid var(--lagoon);
-    padding-bottom:1px;
+    display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:700;
+    color:var(--sea); text-decoration:none; border-bottom:1.5px solid var(--sea); padding-bottom:1px;
   }
   .mapLink:hover{ color:var(--coral); border-color:var(--coral); }
   .mapLink svg{ width:13px; height:13px; }
 
   .blogNote{
-    margin-top:12px;
-    background:var(--sand);
-    border-left:3px solid var(--sun);
-    padding:12px 16px;
-    border-radius:0 10px 10px 0;
-    font-size:14px;
-    color:#4a4136;
+    margin-top:12px; background:var(--sand); border-left:3px solid var(--sun);
+    padding:12px 16px; border-radius:0 10px 10px 0; font-size:14px; color:#4a4136;
   }
   .blogNote .label{
-    display:block;
-    font-size:11px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--coral);
-    font-weight:700;
-    margin-bottom:4px;
+    display:block; font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--coral); font-weight:700; margin-bottom:4px;
   }
 
-  /* ---------- FOOD TABLE ---------- */
-  .foodGrid{
-    display:grid;
-    gap:14px;
-  }
+  .foodGrid{ display:grid; gap:14px; }
   .foodRow{
-    display:grid;
-    grid-template-columns:120px 1fr;
-    gap:18px;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:14px;
-    padding:18px 20px;
-    align-items:start;
+    display:grid; grid-template-columns:120px 1fr; gap:18px; background:#fff;
+    border:1px solid var(--line); border-radius:14px; padding:18px 20px; align-items:start;
   }
   .foodRow .tag{
-    font-size:12.5px;
-    font-weight:700;
-    color:#fff;
-    background:var(--lagoon);
-    padding:5px 10px;
-    border-radius:999px;
-    text-align:center;
-    align-self:start;
+    font-size:12.5px; font-weight:700; color:#fff; background:var(--sea);
+    padding:5px 10px; border-radius:999px; text-align:center; align-self:start;
   }
   .foodRow h4{ margin:0 0 4px; font-size:16px; }
-  .foodRow p{ margin:0 0 8px; font-size:14px; color:#42565f; }
+  .foodRow p{ margin:0 0 8px; font-size:14px; color:#4c5c56; }
 
-  /* ---------- FOOTER ---------- */
-  footer{
-    background:var(--deep-sea);
-    color:var(--sand);
-    padding:50px 24px 40px;
-    text-align:center;
-  }
+  footer{ background:var(--dusk); color:var(--sand); padding:50px 24px 40px; text-align:center; }
   footer p{ opacity:0.7; font-size:13px; margin:6px 0 0; }
-  footer h3{ margin:0 0 10px; font-family:'Fraunces',serif; font-size:20px;}
+  footer h3{ margin:0 0 10px; font-family:'Fraunces',serif; font-size:20px; }
 
   @media (max-width:560px){
     .stop{ grid-template-columns:1fr; }
@@ -269,75 +114,156 @@
 <body>
 
 <div class="hero">
-  <div class="eyebrow">Yaeyama Islands · Okinawa</div>
-  <h1>石垣島<br>四天三夜</h1>
-  <p class="sub">10月初的潮汐、珊瑚礁與市場氣味 —— 一份帶著店家連結與旅人筆記的行程手冊。</p>
+  <div class="eyebrow">Hengchun Peninsula · Taiwan</div>
+  <h1>恆春半島<br>三天兩夜</h1>
+  <p class="sub">11月的南台灣，草原、斷崖與海風 —— 一份帶著店家連結與旅人筆記的輕旅行手冊。</p>
   <svg class="tide" viewBox="0 0 1440 90" preserveAspectRatio="none">
-    <path fill="#f4ecdd" d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,45 L1440,90 L0,90 Z"></path>
+    <path fill="#f3ecd9" d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,45 L1440,90 L0,90 Z"></path>
   </svg>
 </div>
 
 <nav class="dayNav">
   <a href="#prep">行前準備</a>
+  <a href="#season">11月適合度</a>
   <a href="#day1">Day 1</a>
   <a href="#day2">Day 2</a>
   <a href="#day3">Day 3</a>
-  <a href="#day4">Day 4</a>
+  <a href="#play">玩樂選項</a>
   <a href="#food">美食清單</a>
 </nav>
 
 <section class="block" id="prep">
   <div class="kicker">Before You Go</div>
   <h2>行前準備</h2>
-  <p class="lede">10月初仍在沖繩颱風季尾聲，多留一點彈性，行程會輕鬆很多。</p>
+  <p class="lede">11月東北季風主要影響北部，恆春半島有中央山脈屏障，氣候依然穩定溫暖。</p>
   <div class="prepGrid">
     <div class="prepCard">
-      <h3>颱風監控</h3>
-      <p>出發前1-2週追蹤日本氣象廳動態，機票與住宿盡量選可免費改期的方案。</p>
+      <h3>交通方式</h3>
+      <p>景點分散，建議租機車或汽車。高鐵到左營後轉租車，比自行開車南下更省時間。</p>
     </div>
     <div class="prepCard">
-      <h3>租車</h3>
-      <p>島上大眾運輸有限，租車幾乎是必要。國際駕照需搭配駕照日文譯本。</p>
+      <h3>防風防曬</h3>
+      <p>龍磐、風吹砂一帶風勢強勁，建議帶件防風外套；白天陽光仍強，防曬不能少。</p>
     </div>
     <div class="prepCard">
-      <h3>防曬防蟲</h3>
-      <p>10月初紫外線依舊強烈，防曬乳、蘆薈膠、防蚊液都值得放進行李箱。</p>
+      <h3>避開人潮</h3>
+      <p>墾丁大街周末人潮較多，若想清幽，重點可以放在龍磐、滿州、旭海這類較少開發的角落。</p>
     </div>
     <div class="prepCard">
-      <h3>現金準備</h3>
-      <p>離島小店、部分食堂不收卡，建議隨身準備一些日圓現金。</p>
+      <h3>現金與訂位</h3>
+      <p>後壁湖海鮮餐廳、人氣糕餅店旺季常需候位，用餐時間建議提早或先電話詢問。</p>
     </div>
+  </div>
+</section>
+
+<section class="block" id="season">
+  <div class="kicker">November Check</div>
+  <h2>11月玩樂適合度</h2>
+  <p class="lede">整體氣候依然溫暖（白天約25-28°C），但水域活動要看當天海況，陸域活動幾乎不受影響。</p>
+
+  <div class="foodGrid">
+    <div class="foodRow">
+      <div class="tag" style="background:var(--grass);">陸域・穩定</div>
+      <div>
+        <h4>ATV沙灘車、社頂健行、酒吧夜生活</h4>
+        <p>不受季節影響，11月正常營業。社頂自然公園氣候涼爽反而比夏天更好走。</p>
+      </div>
+    </div>
+    <div class="foodRow">
+      <div class="tag" style="background:var(--coral);">水域・看海況</div>
+      <div>
+        <h4>船帆石浮潛、南灣水上摩托車/香蕉船、潛水體驗</h4>
+        <p>11月東北季風主要影響北部，但恆春東側（船帆石、佳樂水一帶）風浪仍會比夏天略大，能見度下降，業者會視當天海況決定是否出海，臨時取消的機率比夏天高。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="blogNote" style="margin-top:18px;">
+    <span class="label">安排建議</span>
+    水上活動盡量排在行程前段（Day 1-2），臨時取消還有時間調整順序；出發前1-2天直接電話問業者當天海況，會比單看氣象預報準確。若特別在意浮潛/潛水的能見度，4-10月是恆春東側水域更穩定的季節。
   </div>
 </section>
 
 <section class="block" id="day1">
   <div class="dayHeader">
     <div class="dayNum">01</div>
-    <div class="dayTitle">抵達 &amp; 市區漫遊</div>
+    <div class="dayTitle">墾丁主線</div>
   </div>
-  <p class="dayTagline">從機場到榮町的第一口海風</p>
+  <p class="dayTagline">從沙灘到岬角，第一天感受恆春的海</p>
+
+  <div class="stop">
+    <div class="time">午後</div>
+    <div class="content">
+      <h4>南灣（South Bay）</h4>
+      <p>墾丁最容易抵達的沙灘，水質清澈。這裡也是水上活動的集中地，香蕉船、水上摩托車、拖曳傘都能現場報名，適合想玩得刺激一點的人。</p>
+      <div class="blogNote">
+        <span class="label">報名資訊</span>
+        沙灘上有多家水上活動業者現場駐點，通常不需要提前預約，抵達後直接找攤位詢問即可；旺季或假日建議提早到（上午較不用等），現場付款、無需訂金。
+      </div>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJuRn9rquxcTQRj7DymJRgtnc" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        在 Google 地圖上開啟
+      </a>
+    </div>
+  </div>
 
   <div class="stop">
     <div class="time">下午</div>
     <div class="content">
-      <h4>Check-in &amp; 榮町商店街</h4>
-      <p>放下行李後到榮町散步，感受在地生活步調，晚上覓食的屋台區也在這附近。</p>
+      <h4>貓鼻頭公園（Maobitou Park）</h4>
+      <p>珊瑚礁海岬地形，因岩石外觀似貓而得名，多個觀景台可眺望巴士海峽。</p>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJJVE29t6vcTQRC_jrh2AFxCI" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        在 Google 地圖上開啟
+      </a>
+      <div class="blogNote">
+        <span class="label">旅人筆記</span>
+        風勢在這裡格外明顯，不少旅人提醒隨身物品要拿穩，但也因此換來一片格外通透的海天視野。
+      </div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="time">傍晚</div>
+    <div class="content">
+      <h4>高山巖福德宮（關山夕陽）</h4>
+      <p>台灣歷史最悠久的土地公廟之一，也是眺望恆春鎮與夕陽的絕佳制高點。</p>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJqw18Q3qwcTQRdaYoFX03qxM" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        在 Google 地圖上開啟
+      </a>
     </div>
   </div>
 
   <div class="stop">
     <div class="time">晚餐</div>
     <div class="content">
-      <h4>Ishigakiya 石垣屋（石垣牛燒肉）</h4>
-      <p>島上人氣燒肉店，肉質分級講究，用餐前務必先訂位。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJwSJ5vJ4KYDQRi2_8P2J_ihg" target="_blank">
+      <h4>亞發師海景餐廳（後壁湖海鮮）</h4>
+      <p>後壁湖漁港旁的海景餐廳，海鮮直接從碼頭送來，生魚片與現撈料理評價都很高。</p>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJKx6Ov86wcTQRvTNpE_ZLg6o" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         在 Google 地圖上開啟
       </a>
       <div class="blogNote">
         <span class="label">旅人筆記</span>
-        不少造訪過的旅客提到，這裡的牛肉部位分切細緻，每個部位口感差異明顯，是那種會讓人想預留第二晚再訪一次的店。
+        坐在漁港旁邊看船進出、邊吃現撈海鮮，是這頓晚餐比餐點本身更讓人記住的部分。
       </div>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="time">夜晚</div>
+    <div class="content">
+      <h4>昆汀 Bar&amp;Food（墾丁大街夜生活）</h4>
+      <p>墾丁大街上評價很高的酒吧，調酒選擇多、氣氛熱鬧，是為第一天畫下句點的好去處，週末常有現場音樂。</p>
+      <div class="blogNote">
+        <span class="label">報名資訊</span>
+        平日18:00-01:00、週末營業至02:00，不需訂位可直接前往；若想要靠窗或沙發區座位，週五六建議提早入場卡位。
+      </div>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJd6o5PDixcTQRn3jiGfu4v3A" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        在 Google 地圖上開啟
+      </a>
     </div>
   </div>
 </section>
@@ -345,32 +271,32 @@
 <section class="block" id="day2">
   <div class="dayHeader">
     <div class="dayNum">02</div>
-    <div class="dayTitle">川平灣 &amp; 北部海岸</div>
+    <div class="dayTitle">龍磐草原 &amp; 東岸清幽路線</div>
   </div>
-  <p class="dayTagline">玻璃船下的珊瑚礁，與一次與魔鬼魚的邂逅</p>
+  <p class="dayTagline">從遼闊草坡到幾乎沒有遊客的原始海岸</p>
 
   <div class="stop">
-    <div class="time">09:30</div>
+    <div class="time">上午</div>
     <div class="content">
-      <h4>川平灣（Kabira Bay）</h4>
-      <p>石垣島最具代表性的海灣，搭乘玻璃底船欣賞珊瑚與熱帶魚群。海灣本身禁止下水，僅能搭船觀賞。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJq3PQEe7dXzQR8VwfG5-d-Jo" target="_blank">
+      <h4>龍磐公園（Longpan Park）</h4>
+      <p>珊瑚礁石灰岩台地與草原交織的地形，是整個恆春半島視野最遼闊的景點之一，也是熱門的觀星地點。</p>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJoRA-sl6ycTQR3kXYA9igkhw" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         在 Google 地圖上開啟
       </a>
       <div class="blogNote">
         <span class="label">旅人筆記</span>
-        即使是陰天造訪，海水依然清澈得驚人，是那種即使人潮不少也不會讓人失望的景點。
+        騎車經過這段路的旅人常提到，風勢雖大但完全值得，那種毫無遮蔽的海天一色很難在其他地方複製。
       </div>
     </div>
   </div>
 
   <div class="stop">
-    <div class="time">11:00</div>
+    <div class="time">中午</div>
     <div class="content">
-      <h4>高嶺酒造所（泡盛體驗）</h4>
-      <p>川平灣步行可達的泡盛釀酒廠，可試飲並購買限定款作為伴手禮。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJsRRkb5LdXzQRNy6rFhRGDVs" target="_blank">
+      <h4>風吹砂（Fengchuisha）</h4>
+      <p>強勁海風將沙丘吹向台地，形成特殊的風蝕地形，也是熱門的婚紗取景地。</p>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJZV-_DhWxcTQRtFhYQBBwaUY" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         在 Google 地圖上開啟
       </a>
@@ -378,30 +304,54 @@
   </div>
 
   <div class="stop">
-    <div class="time">13:00</div>
+    <div class="time">中午</div>
     <div class="content">
-      <h4>Manta Holic Kabira（浮潛 / 潛水）</h4>
-      <p>家族經營的小型潛水店，帶團前往 Yonehara 珊瑚礁海域，是尋找魔鬼魚蹤影的熱門選擇。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJyxAIBxzdXzQR67y_D2M-TvI" target="_blank">
+      <h4>船帆石浮潛（水上活動）</h4>
+      <p>礁岩地形，海水清澈，教練會帶著找海龜與熱帶魚，浮潛裝備現場提供，玩水行程約2-3小時，適合想下水玩耍的人。</p>
+      <div class="blogNote">
+        <span class="label">報名資訊</span>
+        船帆石小巴掌沙灘水上活動，電話 <strong>+886 970 707 020</strong>，營業時間 08:30-18:00。建議前一天先電話預約場次與人數，活動需視當天海況決定是否開放。
+      </div>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJqWIr3m-zcTQRRs59VHuzS28" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         在 Google 地圖上開啟
       </a>
       <div class="blogNote">
         <span class="label">旅人筆記</span>
-        團隊人數不多，教學步調從容，即使是第一次浮潛也能感受到足夠的安全感 —— 這是這家店最常被提起的優點。
+        教練會特地帶著找海龜蹤影，看到的那一刻常是整趟旅程被提起最多次的畫面。
       </div>
     </div>
   </div>
 
   <div class="stop">
-    <div class="time">替代方案</div>
+    <div class="time">午後</div>
     <div class="content">
-      <h4>赤石海灘（Akaishi Beach）</h4>
-      <p>不潛水的話，這裡是少數幾乎沒有遊客的清幽海灘，適合單純看海發呆。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJha5vBELuXzQROWzE1pxDWHU" target="_blank">
+      <h4>佳樂水風景區（Jialeshuei）</h4>
+      <p>特殊海蝕地形，園區內有接駁車遊覽奇岩怪石，沿途東海岸線景色開闊。</p>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJ0TQn15q0cTQRqTVAnEPMmC8" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         在 Google 地圖上開啟
       </a>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="time">傍晚</div>
+    <div class="content">
+      <h4>九棚吉普沙灘車會館（ATV越野體驗）</h4>
+      <p>滿州鄉九棚沙漠的招牌玩法，教練會先在練習場帶著熟悉操作，接著沿沙丘與淺灘越野，全程約50分鐘，刺激又不失安全感，很適合作為這天的壓軸活動。</p>
+      <div class="blogNote">
+        <span class="label">報名資訊</span>
+        電話 <strong>+886 980 044 143</strong>，營業時間 08:00-17:00。單人全程約NT$1,200/50分鐘，建議提前1-2天電話預約場次，假日常需候補。
+      </div>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJa7eYNK3LcTQRfxhPJ1Pmtw8" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        在 Google 地圖上開啟
+      </a>
+      <div class="blogNote">
+        <span class="label">旅人筆記</span>
+        教練會不時停下確認每個人的狀況，連第一次上手的長輩和小朋友都能玩得盡興，是這趟旅程公認最刺激的一段。
+      </div>
     </div>
   </div>
 </section>
@@ -409,95 +359,73 @@
 <section class="block" id="day3">
   <div class="dayHeader">
     <div class="dayNum">03</div>
-    <div class="dayTitle">竹富島 &amp; 由布島跳島</div>
+    <div class="dayTitle">旭海 &amp; 賦歸</div>
   </div>
-  <p class="dayTagline">水牛車踏過淺灘，走進一座沒有柏油路的聚落</p>
+  <p class="dayTagline">整個半島最清幽的角落，作為旅程的收尾</p>
 
   <div class="stop">
-    <div class="time">08:30</div>
+    <div class="time">上午</div>
     <div class="content">
-      <h4>石垣港離島碼頭（出發點）</h4>
-      <p>前往竹富島與由布島的船班都從這裡出發，記得提前一天確認潮汐與船期。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJcQ2at7MKYDQRQlV_2PXdAE0" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        在 Google 地圖上開啟
-      </a>
-    </div>
-  </div>
-
-  <div class="stop">
-    <div class="time">13:00</div>
-    <div class="content">
-      <h4>由布島水牛車</h4>
-      <p>退潮時由水牛拉車涉水而過，是石垣周邊離島最具代表性的畫面之一。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJJS_2KaF5YDQRzWJbCDQ64tk" target="_blank">
+      <h4>旭海大草原（Xuhai Grassland）</h4>
+      <p>從停車場步行約10分鐘即可抵達涼亭，環形步道平緩好走，是「無敵海景」名不虛傳的地方，遊客稀少。</p>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJJSQ2ewDNcTQRxyrCe5r7_Gs" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         在 Google 地圖上開啟
       </a>
       <div class="blogNote">
         <span class="label">旅人筆記</span>
-        駕車的師傅常會沿路用三線琴唱起沖繩民謠，是這段體驗最容易被記住的細節，不只是「搭一次車」而已。
+        走完整段步道後回望山下的阿朗壹古道與海岸線，這個角度常被形容為整趟旅程最安靜、最值得停留的畫面。
       </div>
     </div>
   </div>
 
   <div class="stop">
-    <div class="time">晚餐</div>
+    <div class="time">中午</div>
     <div class="content">
-      <h4>Minaminoshima 在地食堂</h4>
-      <p>份量扎實、價格親民的家庭式食堂，跳島一天後很適合來這裡補足元氣。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJI7_P-XJ1YDQRukqsoSVOsaY" target="_blank">
+      <h4>阿嬤姐綠豆蒜（恆春鎮）</h4>
+      <p>恆春鎮上人氣甜品店，黑糖風味的綠豆蒜是招牌，離開前很適合當作最後一站甜點。</p>
+      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJVVPaXs6wcTQRUoCQ28lb5Ys" target="_blank">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         在 Google 地圖上開啟
       </a>
+    </div>
+  </div>
+
+  <div class="stop">
+    <div class="time">下午</div>
+    <div class="content">
+      <h4>賦歸</h4>
+      <p>採買瓊麻工藝品、洋蔥相關伴手禮後，返回租車點或高鐵站北返。</p>
     </div>
   </div>
 </section>
 
-<section class="block" id="day4">
-  <div class="dayHeader">
-    <div class="dayNum">04</div>
-    <div class="dayTitle">西表島探險 或 悠閒收尾</div>
-  </div>
-  <p class="dayTagline">選一個屬於這趟旅程的結尾方式</p>
+<section class="block" id="play">
+  <div class="kicker">More Fun</div>
+  <h2>延伸玩樂選項</h2>
+  <p class="lede">如果想把行程排得更刺激，這幾個可以視體力和天數彈性加進來。</p>
 
-  <div class="stop">
-    <div class="time">選項 A</div>
-    <div class="content">
-      <h4>仲間川紅樹林遊船（西表島）</h4>
-      <p>船程往返約需一整個上午，適合體力尚可、想多看一種地形的旅人。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJXelw6aF8YDQRZSsQKk58ztU" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        在 Google 地圖上開啟
-      </a>
+  <div class="prepGrid">
+    <div class="prepCard">
+      <h3>墾丁沙灘車 ATV</h3>
+      <p>南灣漆彈場旁的沙灘車體驗，評分滿分，雙人30分鐘約NT$800，適合安排在南灣戲水後接著玩。<br>
+        電話 <strong>+886 971 011 935</strong>｜營業 09:00-17:30，建議先電話預約<br>
+        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJzd61-NmxcTQR3VBcwpQ79wk" target="_blank">Google 地圖</a>
+      </p>
     </div>
-  </div>
-
-  <div class="stop">
-    <div class="time">選項 A+</div>
-    <div class="content">
-      <h4>IRIOMOTE ADVENTURE PiPi（獨木舟 / 浮潛）</h4>
-      <p>當地評價極高的探險工作室，紅樹林獨木舟、浮潛行程都能安排半日制。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJvwLyMBiAYDQRlq86Z5yphaY" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        在 Google 地圖上開啟
-      </a>
+    <div class="prepCard">
+      <h3>潛水體驗</h3>
+      <p>暖洋潛水旅宿有中文/英文教練，可安排一日體驗潛水，運氣好能遇上海龜與海蛇。<br>
+        電話 <strong>+886 973 030 875</strong>，建議至少提前2-3天預約並確認裝備尺寸<br>
+        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJw1_hUs6wcTQRPeyreKu0CL4" target="_blank">Google 地圖</a>
+      </p>
     </div>
-  </div>
-
-  <div class="stop">
-    <div class="time">選項 B</div>
-    <div class="content">
-      <h4>Natural Garden Cafe PUFFPUFF</h4>
-      <p>面海的悠閒早午餐咖啡廳，若想留一個放空的早晨，這裡是不錯的選擇。</p>
-      <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJwYt9nr0KYDQRhVEumI8wJYA" target="_blank">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        在 Google 地圖上開啟
-      </a>
-      <div class="blogNote">
-        <span class="label">旅人筆記</span>
-        落地窗面海的座位是這裡的招牌，午後陽光斜射進來時，會有種時間被放慢的錯覺。
-      </div>
+    <div class="prepCard">
+      <h3>社頂自然公園</h3>
+      <p>步道約2小時走完，沿途常能遇見野生獼猴、蝴蝶與老鷹，走起來輕鬆但畫面很有野趣，不需報名可自由入園。<br>
+        電話 <strong>+886 8 886 1821</strong>（園區服務台）｜營業 09:00-17:00<br>
+        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJo-TLGMyzcTQRUesIYGpzN9o" target="_blank">Google 地圖</a>
+      </p>
     </div>
   </div>
 </section>
@@ -505,55 +433,71 @@
 <section class="block" id="food">
   <div class="kicker">Food List</div>
   <h2>美食清單彙整</h2>
-  <p class="lede">把幾間值得訂位的店整理在一起，方便安排用餐順序。</p>
+  <p class="lede">把值得安排的店整理在一起，方便對照用餐順序。</p>
 
   <div class="foodGrid">
     <div class="foodRow">
-      <div class="tag">燒肉</div>
+      <div class="tag">海鮮</div>
       <div>
-        <h4>Ishigakiya 石垣屋</h4>
-        <p>石垣牛專門店，建議提前訂位。</p>
-        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJwSJ5vJ4KYDQRi2_8P2J_ihg" target="_blank">Google 地圖</a>
+        <h4>亞發師海景餐廳</h4>
+        <p>後壁湖漁港現撈海鮮，價格實在、海景加分。</p>
+        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJKx6Ov86wcTQRvTNpE_ZLg6o" target="_blank">Google 地圖</a>
       </div>
     </div>
     <div class="foodRow">
-      <div class="tag">壽司</div>
+      <div class="tag">甜品</div>
       <div>
-        <h4>Umimi Sushi</h4>
-        <p>近期開幕的高評價壽司店，主廚現場捏製，需提前訂位。</p>
-        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJN84P9gLfXzQRRrDj5MYwGPs" target="_blank">Google 地圖</a>
+        <h4>阿嬤姐綠豆蒜</h4>
+        <p>恆春鎮上的招牌甜品店，黑糖風味評價最高。</p>
+        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJVVPaXs6wcTQRUoCQ28lb5Ys" target="_blank">Google 地圖</a>
       </div>
     </div>
     <div class="foodRow">
-      <div class="tag">食堂</div>
+      <div class="tag">早餐</div>
       <div>
-        <h4>Minaminoshima</h4>
-        <p>家庭式定食，份量大、氣氛道地。</p>
-        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJI7_P-XJ1YDQRukqsoSVOsaY" target="_blank">Google 地圖</a>
+        <h4>吳家中式早餐</h4>
+        <p>在地人排隊的早餐店，招牌是臭豆腐蛋餅，外皮酥脆、內餡濕潤，建議早點去避開人潮。</p>
+        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJT71_Ds6wcTQRC2JWiVv69ps" target="_blank">Google 地圖</a>
       </div>
     </div>
     <div class="foodRow">
-      <div class="tag">早午餐</div>
+      <div class="tag">牛肉麵</div>
       <div>
-        <h4>Shun Ya Banchan</h4>
-        <p>小巧溫馨的日式早午餐，常客滿，記得先訂位。</p>
-        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJCbZqHSfiXzQRayE2X8RBQ6w" target="_blank">Google 地圖</a>
+        <h4>老娘牛肉麵</h4>
+        <p>評分4.8的隱藏名店，湯頭濃郁、牛肉燉得軟嫩，小菜（如皮蛋）也常被提起，用餐時段常滿座。</p>
+        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJIQpbUpSxcTQR7ATeKsy_Fuo" target="_blank">Google 地圖</a>
       </div>
     </div>
     <div class="foodRow">
-      <div class="tag">泡盛</div>
+      <div class="tag">燒烤</div>
       <div>
-        <h4>玉那覇酒造所</h4>
-        <p>八重山最古老的泡盛酒造，部分限定款僅在店內販售。</p>
-        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJGVQjDawKYDQREGakJJraQZs" target="_blank">Google 地圖</a>
+        <h4>恆春無名碳烤</h4>
+        <p>不定期公休（建議先電話確認），現點現烤的雞心、甜不辣、芋頭糕都有不錯評價，適合宵夜或晚餐加點。</p>
+        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJbXIINs6wcTQRvXMcuNGKuLs" target="_blank">Google 地圖</a>
+      </div>
+    </div>
+    <div class="foodRow">
+      <div class="tag">冰品</div>
+      <div>
+        <h4>歐洲情人洋蔥冰淇淋</h4>
+        <p>老闆自創的洋蔥風味冰淇淋，聽起來特別，吃起來意外順口，恆春老街必嚐的特色小店。</p>
+        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJ_zRS9c6wcTQRVmad5IWA0yc" target="_blank">Google 地圖</a>
+      </div>
+    </div>
+    <div class="foodRow">
+      <div class="tag">咖啡廳</div>
+      <div>
+        <h4>海龜咖啡 SeaTurtle Cafe</h4>
+        <p>面海的可愛小咖啡廳，餐點有創意，適合安排在後壁湖或貓鼻頭路線途中稍作停留。營業時段與公休日請先查詢IG。</p>
+        <a class="mapLink" href="https://www.google.com/maps/place/?q=place_id:ChIJ5w5GKta7cTQRGAzVingBP5U" target="_blank">Google 地圖</a>
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <h3>祝旅途順風 🌊</h3>
-  <p>行程與船班會因潮汐、天候調整，出發前請以現場公告與官方資訊為準。</p>
+  <h3>祝旅途順風 🌾</h3>
+  <p>戶外景點多為開放空間，天氣與風勢變化快，出發前請留意當日預報。</p>
 </footer>
 
 </body>
